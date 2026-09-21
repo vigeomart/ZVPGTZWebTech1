@@ -1,0 +1,39 @@
+body{
+    font-size: 25px;
+}
+p{
+    color: grey;
+    text-align: center;
+}
+.blueClass{
+    color: blue;
+}
+#important{
+    color: red;
+    font-size: 50px;
+}
+.borderClass{
+    border-width: 15px;
+    padding: 10px;
+    margin: 10px;
+    border-style: dotted;
+    border-radius: 5px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table tr:nth-child(even){
+    background-color: aqua;
+}
+table tr:hover{
+    background-color: rgb(223, 44, 74);
+    cursor: pointer;
+}
+table tr {
+    transition: background-color 1s ease-in-out;
+}
+table td {
+    padding: 5px;
+    margin: 5px;
+}
