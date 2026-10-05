@@ -1,46 +1,119 @@
+<!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS gyak</title>
+    <title>Diák űrlap</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 400px;
+            margin: 30px auto;
+        }
+
+        .mezo {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px;
+        }
+
+        .hiba {
+            color: red;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .hibas {
+            border: 2px solid red;
+        }
+
+        button {
+            padding: 8px 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-    <form>
-        <p><label id="nevLabel" for="nev">Név</label></p>
-        <input type="text" id="nev" onkeydown="
-        isEmpty('nev','Név');
-        ">
-        <p><label for="lakcim" id="lakcimLabel">Lakcím</label></p>
-        <input type="text" id="lakcim" onkeydown="
-        isEmpty('lakcim', 'Lakcím');
-        ">
-        <p><label for="korLabel" id="korLabel">Kor</label></p>
-        <input type="text" id="kor" onkeyup="
-        isEmpty('kor', 'Kor');
-        isValid('kor',18,100);
-        ">
-        <p><label for="anyja" id="anyjaLabel">Anyja</label></p>
-        <input type="text" id="anyja" onkeydown="
-        isEmpty('anyja', 'Anyja');
-        ">
-        <p><label for="kar" id="karLabel">Kar</label></p>
-        <input type="text" id="kar" onkeydown="
-        isEmpty('kar', 'Kar');
-        ">
-        <p><label for="szak" id="szakLabel">Szak</label></p>
-        <input type="text" id="szak" onkeydown="
-        isEmpty('szak', 'Szak');
-        ">
-        <p><label for="diak" id="diakLabel">Diákigazolvány szám</label></p>
-        <input type="text" id="diak" onkeydown="
-        isEmpty('diak', 'Diák');
-        ">
-        
-        <p><label for="adatkezeles">Adatkezelési nyilatkozat</label></p>
-        <input type="checkbox" id="adatkezeles">
+
+    <form id="diakForm">
+
+        <div class="mezo">
+            <label for="nev">Név:</label>
+            <input type="text" id="nev">
+            <div id="nevHiba" class="hiba"></div>
+        </div>
+
+        <div class="mezo">
+            <label for="lakcim">Lakcím:</label>
+            <input type="text" id="lakcim">
+            <div id="lakcimHiba" class="hiba"></div>
+        </div>
+
+        <div class="mezo">
+            <label for="kor">Kor:</label>
+            <input type="text" id="kor">
+            <div id="korHiba" class="hiba"></div>
+        </div>
+
+        <div class="mezo">
+            <label for="anyja">Anyja neve:</label>
+            <input type="text" id="anyja">
+            <div id="anyjaHiba" class="hiba"></div>
+        </div>
+
+        <div class="mezo">
+            <label for="egyetem">Egyetem neve:</label>
+            <input type="text" id="egyetem">
+            <div id="egyetemHiba" class="hiba"></div>
+        </div>
+
+        <div class="mezo">
+            <label for="kar">Kar neve:</label>
+            <input type="text" id="kar">
+            <div id="karHiba" class="hiba"></div>
+        </div>
+
+        <div class="mezo">
+            <label for="szak">Szak neve:</label>
+            <input type="text" id="szak">
+            <div id="szakHiba" class="hiba"></div>
+        </div>
+
+        <div class="mezo">
+            <label for="diak">Diákigazolvány szám:</label>
+            <input type="text" id="diak">
+            <div id="diakHiba" class="hiba"></div>
+        </div>
+
+        <div class="mezo">
+            <input type="checkbox" id="adatkezeles">
+            <label for="adatkezeles">
+                Elfogadom az adatkezelési szabályzatot.
+            </label>
+            <div id="adatkezelesHiba" class="hiba"></div>
+        </div>
+
+        <button type="submit">Küldés</button>
+
     </form>
-    
-    <script src="app.js">
-    </script>
+
+    <script src="app.js"></script>
+
 </body>
+
 </html>
