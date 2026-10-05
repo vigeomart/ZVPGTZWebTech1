@@ -1,0 +1,46 @@
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS gyak</title>
+</head>
+<body>
+    <form>
+        <p><label id="nevLabel" for="nev">Név</label></p>
+        <input type="text" id="nev" onkeydown="
+        isEmpty('nev','Név');
+        ">
+        <p><label for="lakcim" id="lakcimLabel">Lakcím</label></p>
+        <input type="text" id="lakcim" onkeydown="
+        isEmpty('lakcim', 'Lakcím');
+        ">
+        <p><label for="korLabel" id="korLabel">Kor</label></p>
+        <input type="text" id="kor" onkeyup="
+        isEmpty('kor', 'Kor');
+        isValid('kor',18,100);
+        ">
+        <p><label for="anyja" id="anyjaLabel">Anyja</label></p>
+        <input type="text" id="anyja" onkeydown="
+        isEmpty('anyja', 'Anyja');
+        ">
+        <p><label for="kar" id="karLabel">Kar</label></p>
+        <input type="text" id="kar" onkeydown="
+        isEmpty('kar', 'Kar');
+        ">
+        <p><label for="szak" id="szakLabel">Szak</label></p>
+        <input type="text" id="szak" onkeydown="
+        isEmpty('szak', 'Szak');
+        ">
+        <p><label for="diak" id="diakLabel">Diákigazolvány szám</label></p>
+        <input type="text" id="diak" onkeydown="
+        isEmpty('diak', 'Diák');
+        ">
+        
+        <p><label for="adatkezeles">Adatkezelési nyilatkozat</label></p>
+        <input type="checkbox" id="adatkezeles">
+    </form>
+    
+    <script src="app.js">
+    </script>
+</body>
+</html>
